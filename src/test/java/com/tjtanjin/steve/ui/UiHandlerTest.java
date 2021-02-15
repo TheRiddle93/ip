@@ -30,11 +30,12 @@ public class UiHandlerTest extends AnchorPane {
 
     @Test
     void showWelcome_whenInvokePrintln_thenOutputCaptorSuccess() {
-        String logo = " ____        _        \n"
-                + "|  _ \\ _   _| | _____ \n"
-                + "| | | | | | | |/ / _ \\\n"
-                + "| |_| | |_| |   <  __/\n"
-                + "|____/ \\__,_|_|\\_\\___|\n";
+        String logo = 
+                  " ____        _        \n"
+                + "|  _ \\ _  _| | __ __ \n"
+                + "| | | | | | | |/ / _ | \n"
+                + "| |_| | |_| |   <\  ___|\n"
+                + "|____/ \__,_|_|\_\\____|\n";
         String expectedMsg = "Hello from\n" + logo + "\nWhat can I do for you?";
         UI_HANDLER.showWelcomeMsg();
         assertEquals(expectedMsg, OUTPUT_STREAM_CAPTOR.toString().trim());
